@@ -1,1 +1,0 @@
-# DailyPulse-news-application
