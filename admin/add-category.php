@@ -44,3 +44,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+
+<div class="login-form-bg h-100">
+    <div class="container mt-5 h-100">
+        <div class="row justify-content-center h-100">
+            <div class="col-xl-6">
+                <div class="form-input-content">
+                    <div class="card login-form mb-0">
+                        <div class="card-body pt-5 shadow">
+                            <h4 class="text-center pb-3">Create Topic</h4>
+                            <form method="POST" action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>">
+                                <div class="form-group">
+                                    <label>Topic Name :</label>
+                                    <input type="text" class="form-control" value="<?php echo $category; ?>" name="cat_name">
+                                    <?php echo $category_error; ?>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php
+require_once "include/footer.php";
+?>
